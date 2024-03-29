@@ -1,0 +1,70 @@
+<!-- This the CSS Code -->
+
+                 body {
+                margin:0;
+                padding:0;
+                border-box:box-sizing;
+                }
+
+                .background-heart {
+                height:100vh;
+                animation:pulseBackground 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite alternate;
+                }
+
+                .message {
+                font-family: 'Pacifico', cursive;
+                text-align:center;
+                font-size:2em;
+                }
+
+                .heart {
+                z-index:2;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: red;
+                height: 50px;
+                width: 50px;
+                animation:pulse 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite alternate;
+                }
+                .heart::after {
+                background-color: red;
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: 0px;
+                left: 25px;
+                }
+                .heart::before {
+                content:"";
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: -25px;
+                left: 0px;
+                }
+
+                @keyframes pulse {
+                0% {
+                transform:rotate(-45deg) scale(1.0);
+                }
+                100% {
+                transform:rotate(-45deg) scale(2.0) ;
+                }
+                }
+
+                @keyframes pulseBackground {
+                0% {
+                background-color:#FFF;
+                }
+                100% {
+                background-color:#FFDDDD;
+                }
+                }
